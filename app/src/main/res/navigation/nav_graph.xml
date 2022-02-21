@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/listFragment">
+
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="com.example.wap.ui.todo_list.ListFragment"
+        android:label="fragment_list"
+        tools:layout="@layout/fragment_todo_list" >
+        <action
+            android:id="@+id/action_listFragment_to_gameFragment"
+            app:destination="@id/gameFragment" />
+        <action
+            android:id="@+id/action_listFragment_to_addEditFragment"
+            app:destination="@id/addEditFragment" />
+        <action
+            android:id="@+id/action_listFragment_to_completedListFragment"
+            app:destination="@id/completedListFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/gameFragment"
+        android:name="com.example.wap.ui.character.CharacterFragment"
+        android:label="fragment_game"
+        tools:layout="@layout/fragment_character" >
+        <action
+            android:id="@+id/action_gameFragment_to_touchGameFragment"
+            app:destination="@id/touchGameFragment" />
+        <action
+            android:id="@+id/action_gameFragment_to_shakeGameFragment"
+            app:destination="@id/shakeGameFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addEditFragment"
+        android:name="com.example.wap.ui.add_edit_todo.EditFragment"
+        android:label="fragment_add_edit"
+        tools:layout="@layout/fragment_edit" >
+        <action
+            android:id="@+id/action_addEditFragment_to_listFragment"
+            app:destination="@id/listFragment" />
+        <argument
+            android:name="position"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/completedListFragment"
+        android:name="com.example.wap.ui.completed_todo_list.CompletedListFragment"
+        android:label="fragment_completed_list"
+        tools:layout="@layout/fragment_completed_list" >
+        <action
+            android:id="@+id/action_completedListFragment_to_listFragment"
+            app:destination="@id/listFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/touchGameFragment"
+        android:name="com.example.wap.ui.mini_game.TouchGameFragment"
+        android:label="fragment_touch_game"
+        tools:layout="@layout/fragment_touch_game" >
+        <action
+            android:id="@+id/action_touchGameFragment_to_gameFragment"
+            app:destination="@id/gameFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/shakeGameFragment"
+        android:name="com.example.wap.ui.mini_game.ShakeGameFragment"
+        android:label="fragment_shake_game"
+        tools:layout="@layout/fragment_shake_game" >
+        <action
+            android:id="@+id/action_shakeGameFragment_to_gameFragment"
+            app:destination="@id/gameFragment" />
+    </fragment>
+</navigation>
