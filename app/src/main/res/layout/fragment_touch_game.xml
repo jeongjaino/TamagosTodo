@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black"
     tools:context=".ui.mini_game.TouchGameFragment">
 
     <TextView
@@ -11,12 +12,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:layout_marginEnd="80dp"
+        android:layout_marginEnd="20dp"
         android:text="총 획득한 골드 : "
+        android:textColor="@color/white"
+        android:fontFamily="@font/agul1"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/textView9"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -24,10 +26,11 @@
         android:id="@+id/touch_game_gold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
         android:layout_marginTop="40dp"
         android:text="0G"
+        android:textColor="@color/white"
         android:textSize="20sp"
+        android:fontFamily="@font/agul3"
         app:layout_constraintStart_toEndOf="@+id/textView7"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -37,6 +40,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
         android:text="마구마구 클릭하세요!"
+        android:fontFamily="@font/agul3"
+        android:textColor="@color/white"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/touch_layout"
         app:layout_constraintEnd_toEndOf="parent"
@@ -58,15 +63,93 @@
         app:layout_constraintTop_toBottomOf="@+id/textView9">
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:background="@color/black"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/touch_game_image"
+                android:id="@+id/imageView11"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginBottom="60dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/spaceship"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView9"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginBottom="50dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/favourite"
+                app:layout_constraintBottom_toTopOf="@+id/imageView11"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView10"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="70dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/favourite"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageView
+                android:id="@+id/touch_game_image"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:background="@drawable/pet2"
                 app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="50dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/constellation"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="35dp"
+                android:layout_marginBottom="50dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/favourite"
+                app:layout_constraintBottom_toTopOf="@+id/imageView10"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="50dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/galaxy"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="150dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/planet"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
